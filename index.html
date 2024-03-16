@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Escreva um programa em que o usuário informe dois números utilizando o "prompt". Então escreva em tela o maior deles.
+        var valor = parseInt(prompt("Digite sue valor: "))
+
+
+        if(valor > 0){
+            alert("Seu valor é positivo")
+        }else if(valor < 0){
+            alert("Seu valor é negativo")
+        }else{
+            alert("Seu valor é 0")
+        }
+
+
+        var numero1 = parseInt(prompt("Digite numerio 1: "))        
+        var numero2 = parseInt(prompt("Digite numerio 2: "))        
+        var numero3 = parseInt(prompt("Digite numerio 3: "))
+
+        if(numero1 > numero3 && numero1 > numero3){
+          alert(" Seu maior numero é: " + numero1)
+        }else if(numero3 > numero1 && numero3 > numero2){
+            alert(" Seu maior numero é: " + numero3)
+        }else{
+            alert(" Seus maior é: " + numero2)
+        }
+
+
+        //. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero.
+
+
+        var number1 = parseInt(prompt("Digite numerio 1: "))        
+        var number2 = parseInt(prompt("Digite numerio 2: "))        
+        var number3 = parseInt(prompt("Digite numerio 3: "))
+
+        if(number1 > number3 && number2 > number3){
+            soma  = number1 + number2
+            alert(" Seus maiores numeros são: " + number1 +" "+ number2 + ". A soma dos maiores numeros é: " + soma)
+        }else if(number3 > number1 && number2 > number1){
+            soma  = number2 + number3
+            alert(" Seus maiores numeros são: " + number2 +" "+ number3 + ". A soma dos maiores numeros é: " + soma)
+        }else{
+            soma  = number1 + number3
+            alert(" Seus maiores numeros são: " + number1 +" "+ number3 + ". A soma dos maiores numeros é: " + soma)
+        }
+
+
+
+    </script>
+</body>
+</html>
