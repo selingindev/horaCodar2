@@ -8,6 +8,17 @@
 <body>
     <script>
         //1. Escreva um programa em que o usuário informe dois números utilizando o "prompt". Então escreva em tela o maior deles.
+        
+        valorA = parseInt(prompt('Digite um numero a'))
+        valorB = parseInt(prompt('Digite um numero b'))
+
+        if(valorA > valorB){
+            alert('Seu maior valor é: ' + valorA)
+        }else{
+            alert('Seu maior valor é: ' + valorB)
+        }
+        
+        //2. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero.
         var valor = parseInt(prompt("Digite sue valor: "))
 
 
@@ -19,6 +30,7 @@
             alert("Seu valor é 0")
         }
 
+        //3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
 
         var numero1 = parseInt(prompt("Digite numerio 1: "))        
         var numero2 = parseInt(prompt("Digite numerio 2: "))        
@@ -33,9 +45,7 @@
         }
 
 
-        //. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero.
-
-
+        //4- Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero.
         var number1 = parseInt(prompt("Digite numerio 1: "))        
         var number2 = parseInt(prompt("Digite numerio 2: "))        
         var number3 = parseInt(prompt("Digite numerio 3: "))
@@ -52,6 +62,134 @@
         }
 
 
+       //5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+        valor1 = parseInt(prompt('Valor 1: '))
+        valor2 = parseInt(prompt('Valor 2: '))
+        valor3 = parseInt(prompt('Valor 3: '))
+        valor4 = parseInt(prompt('Valor 4: '))
+        valor5 = parseInt(prompt('Valor 5: '))
+        valor6 = parseInt(prompt('Valor 6: '))
+
+        valorFinal = (valor1 + valor2 + valor3 + valor4 + valor5 + valor6) / 6
+        alert('Sua media do 6 valores é: ' + valorFinal)
+
+
+        //6. Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
+        v1 = parseInt(prompt('Digite v1: '))
+        v2 = parseInt(prompt('Digite v2: '))
+        v3 = parseInt(prompt('Digite v3: '))
+        v4 = parseInt(prompt('Digite v4: '))
+        
+        alert('Seu primeiro valor é: ' + v1)
+        alert('Seu ultimo valor é: ' + v2)
+
+        if(v1 > v2 && v1 > v3 && v1>v4){
+            alert('Seu maior valor é: ')
+        }else if(v2 > v1 && v2 > v3 && v2 > v4){
+            alert('Seu maior valor é: ' + v2)
+        }else if(v3 > v1 && v3 > v2 && v3 > v4){
+            alert('Seu maior valor é: ' + v3)
+        }else{
+            alert('Seu maior valor é: ' + v4)
+        }
+
+
+        //7. Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.
+
+            let numeros = [];
+            let somas = 0; 
+            for (let i = 1; i <= 6; i++) {
+            let numero = parseInt(prompt('Digite o ' + i + 'º número: '));
+            numeros.push(numero); 
+
+            if (numero < 72) {
+                somas += numero; 
+            }
+    
+        }
+        alert("Soma dos números inferiores a 72: " + somas);
+
+        //8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+        
+        nota1 = parseInt(prompt('Valor 1: '))
+        nota2 = parseInt(prompt('Valor 2: '))
+        nota3 = parseInt(prompt('Valor 3: '))
+        nota4 = parseInt(prompt('Valor 4: '))
+
+        while(nota1 <= 0 || nota2 <= 0 || nota3 <= 0 || nota4 <= 0 || nota1 >= 10 || nota2 >= 10 || nota3 >= 10 || nota4 >= 10  ){
+            alert('Um dos seus valores informados são menores ou igual ao 0 ou é maior ou igual a 10, digite novamente ')
+            
+        nota1 = parseInt(prompt('Valor 1: '))
+        nota2 = parseInt(prompt('Valor 2: '))
+        nota3 = parseInt(prompt('Valor 3: '))
+        nota4 = parseInt(prompt('Valor 4: '))
+        }
+
+        mediaExame = (nota1 +nota2 + nota3 + nota4) / 4
+
+        if (mediaExame > 5){
+            alert('Parabens usuario você passou no exame sua media é: ' + mediaExame) 
+        }else{
+            alert('Tente outra vez, caduco sua media foi:  ' + mediaExame)
+        }
+
+        // 9- Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+
+        votoOp = 16
+        votoOb = 18
+
+        nascimento = parseInt(prompt('Boa tarde digite seu ano de nascimento'))
+
+        date = new Date()
+        ano = date.getFullYear() 
+        idade = ano - nascimento    
+
+        if(idade < votoOp){
+            alert('você ainda nao possui idade minima para votar')
+        }
+        else if(idade >= votoOp && idade < votoOb ){
+            alert('Você possui idade para votar entretanto é opcional')
+        } else{
+            alert('Seu voto é obrigatorio')
+        }
+
+        //Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1: feminino 2: masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas:
+        sexo = prompt('Digite seu sexo por favor: f para mulher e m para homem: ')
+
+        if(sexo === 'f'){
+            h = parseInt(prompt('Digite sua altura agora em centimetros: ')) / 100
+            calculo = (62.1 * h ) - 44.7 
+            alert('Seu peso ideal é: ' + calculo)
+        }else if(sexo === 'm'){
+            h = parseInt(prompt('Digite sua altura agora em centimetros: ')) / 100
+            calculo = (72.7 * h) - 58         
+            alert('Seu peso ideal é: ' + calculo)
+        }
+
+        //11. Uma micro calculadora Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação). O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. 
+
+        primeiroNumero = parseInt(prompt('Digite seu primeiro valor: '))
+        segundoNumero = parseInt(prompt('Digite seu segundo valor: '))
+
+        conta = parseInt(prompt('Qual é tipo de conta? 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação: '))
+        switch(conta){
+            
+         case 1: resultado = primeiroNumero + segundoNumero
+         alert('A soma dos valores é: ' + resultado)
+         break;
+
+         case 2: resultado = primeiroNumero - segundoNumero
+         
+         alert('A subtração dos valores é: ' + resultado)
+         break; 
+
+         case 3: resultado = primeiroNumero / segundoNumero
+         alert('A divisao dos valores é: ' + resultado)
+         break;  
+
+         case 4:  resultado = primeiroNumero * segundoNumero 
+         alert('A multiplicação dos valores é: ' + resultado)  
+        }
 
     </script>
 </body>
